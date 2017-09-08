@@ -2,6 +2,6 @@ angular.module('helloWorldApp')
 .controller('HomeCtrl' , [
   '$scope',
   function($scope){
-    $scope.message = 'Awesome HZ 3';
+    $scope.message = 'Awesome HZ 4';
   }
 ]);
