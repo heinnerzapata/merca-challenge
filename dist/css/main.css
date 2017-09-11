@@ -1,6 +1,5 @@
 body{
-  padding: 0;
-  margin: 0;
+
 }
 
 
@@ -8,6 +7,20 @@ body{
    width: 100%;
    height:  70vh;
  }
+
+.btn-submit{
+  margin-top: -20px;
+}
+
+.valid{
+  border-bottom-color: #eeff41 !important;  
+}
+
+@media (min-width: 590px) {
+  .btn-submit{
+    margin-top: 22px;
+  }
+}
 
 /*!
  * Materialize v0.100.2 (http://materializecss.com)

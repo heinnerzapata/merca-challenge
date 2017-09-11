@@ -4,18 +4,21 @@
   <section id="fileLoadingSection" class="green accent-3">
     <div class="container">
       <div class="row">
-        <div class="col s12">
+        <div class="col s12 m8">
           <form action="#">
             <div class="file-field input-field">
               <div class="btn lime accent-2 grey-text text-darken-3">
                 <span>Load coordinates</span>
-                <input type="file">
+                <input id="file" type="file" ng-files="getTheFiles($files)">
               </div>
               <div class="file-path-wrapper">
                 <input class="file-path validate" type="text">
               </div>
             </div>
           </form>
+        </div>
+        <div class="col s12 m2 center-align">
+          <button class="btn btn-submit lime accent-2 grey-text text-darken-3" ng-click="uploadFiles()">submit</button>
         </div>
       </div>
     </div>
