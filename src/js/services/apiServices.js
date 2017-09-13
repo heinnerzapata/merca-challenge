@@ -3,7 +3,8 @@ angular.module('helloWorldApp')
 
   return {
     geolocationByAddresss : geolocationByAddresss,
-    uploadFiles : uploadFiles
+    uploadFiles : uploadFiles,
+    getDistanceTwoPoints : getDistanceTwoPoints
   }
 
   function uploadFiles(data){
@@ -30,13 +31,12 @@ angular.module('helloWorldApp')
         return promise;
 
   }
-
   function geolocationByAddresss(address){
     //return data;
 
     var request = {
                     method: 'GET',
-                    url: appConfig.api.geolocationByAddresss + '/' + address                    
+                    url: appConfig.api.geolocationByAddresss + '/' + address
                 };
 
     var defered = $q.defer();
@@ -51,5 +51,24 @@ angular.module('helloWorldApp')
 
         return promise;
         //return appConfig.api.geolocationByAddresss;
+  }
+  function getDistanceTwoPoints(address1,address2){
+    var request = {
+                    method: 'GET',
+                    url: appConfig.api.getDistanceTwoPoints + '/' + address1 + '/' + address2                    
+                };
+
+    var defered = $q.defer();
+    var promise = defered.promise;
+
+          $http(request)
+                .then(function (success){
+                  defered.resolve(success);
+                },function (error){
+                  defered.reject(error);
+                });
+
+    return promise;
+
   }
 });

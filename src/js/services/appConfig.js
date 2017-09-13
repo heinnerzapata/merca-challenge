@@ -3,7 +3,8 @@ angular.module('helloWorldApp')
   return {
     api : {
       geolocationByAddresss : 'http://localhost:3002/api/geolocationByAddresss',
-      uploadFiles : 'http://localhost:3002/api/uploadFiles'
+      uploadFiles : 'http://localhost:3002/api/uploadFiles',
+      getDistanceTwoPoints : 'http://localhost:3002/api/getDistanceTwoPoints'
     }
   }
 });

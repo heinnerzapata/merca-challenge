@@ -25,7 +25,7 @@
   </section>
 <!--/fileLoadingSection-->
 <!--mapSection-->
-  <section>
+  <section id="mapSection">
     <div class="">
       <div class="row">
         <div class="col s12">
@@ -34,7 +34,52 @@
     </div>
   </section>
 <!--/mapSection-->
+<!--resultsSection-->
+  <section id="resultsSection">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l6 ">
 
+            <h3  class="green-text text-accent-3">Points</h3>
+
+            <div class="row">
+              <div class="col s12">
+
+                <div class="row valign-wrapper">
+                  <div class="col s12">
+                    <h4  class="green-text text-accent-3" ng-if="pointsDistance.address2 && pointsDistance.address1">Distance : {{ pointsDistance.distance }}</h4>
+                  </div>
+                  <div class="col s12" ng-if="pointsDistance.address2 && pointsDistance.address1">
+                    <div class="btn lime accent-2 grey-text text-darken-3">
+                      <span ng-click="cleanMap()" >Clean</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="card-panel col s12 m6 card-marker" ng-repeat="marker in markers" ng-class="{selected : marker.selected}">
+
+                      <div class="row valign-wrapper">
+                        <div class="col s12">
+                          <div class="lblAddressFormated">{{ marker.adddressFormated }}</div>
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+        </div>
+        <div class="col s12 l6">
+
+        </div>
+      </div>
+    </div>
+  </section>
+<!--/resultsSection-->
 
 
 <!--/Home-->

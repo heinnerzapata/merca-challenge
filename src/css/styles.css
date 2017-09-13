@@ -1,5 +1,5 @@
 body{
-
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -10,14 +10,61 @@ body{
 
 .btn-submit{
   margin-top: -20px;
+  width: 100%;
+  z-index: -99 !important;
 }
 
 .valid{
-  border-bottom-color: #eeff41 !important;  
+  border-bottom-color: #eeff41 !important;
 }
 
 @media (min-width: 590px) {
   .btn-submit{
     margin-top: 22px;
   }
+}
+
+@media (max-width: 590px) {
+.brand-logo{
+  font-size: 20px !important;
+}
+}
+
+
+
+#mapSection{
+  margin-top: -20px;
+  z-index: -100 !important;
+}
+
+#mapSection .col{
+  padding: 0 !important;
+}
+
+.border{
+  border:solid 2px red;
+}
+
+.card-marker{
+  margin: 5px;
+
+}
+
+.lblAddressFormated{
+  color:#2d2d2d;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.selected{
+  background-color: #eeff41!important;
+}
+
+.brand-logo{
+  font-size: 35px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif !important;
+  font-style: italic;
+
 }
